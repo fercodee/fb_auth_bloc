@@ -71,21 +71,3 @@ class DefaultFirebaseOptions {
     );
   }
 }
-
-  // static const FirebaseOptions android = FirebaseOptions(
-  //   apiKey: 'AIzaSyCtqDmM9pMwqPDC2FTm0noApML13tPIMz8',
-  //   appId: '1:661032825437:android:e230fe4d2a33f2ab1613b4',
-  //   messagingSenderId: '661032825437',
-  //   projectId: 'fb-auth-bloc-lab',
-  //   storageBucket: 'fb-auth-bloc-lab.appspot.com',
-  // );
-
-  // static const FirebaseOptions ios = FirebaseOptions(
-  //   apiKey: 'AIzaSyAujrUYJBFzBIcYRb0z8wQ3xnICZ3JTceY',
-  //   appId: '1:661032825437:ios:d4d57878dd71047a1613b4',
-  //   messagingSenderId: '661032825437',
-  //   projectId: 'fb-auth-bloc-lab',
-  //   storageBucket: 'fb-auth-bloc-lab.appspot.com',
-  //   iosBundleId: 'com.example.fbAuthBloc',
-  // );
-
