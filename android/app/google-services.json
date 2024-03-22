@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "661032825437",
+    "project_id": "fb-auth-bloc-lab",
+    "storage_bucket": "fb-auth-bloc-lab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:661032825437:android:e230fe4d2a33f2ab1613b4",
+        "android_client_info": {
+          "package_name": "com.example.fb_auth_bloc"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtqDmM9pMwqPDC2FTm0noApML13tPIMz8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
