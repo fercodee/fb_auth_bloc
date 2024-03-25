@@ -44,3 +44,7 @@ app.*.map.json
 
 # Secret files
 *.env
+
+# Google Services (contains API keys)
+/android/app/google-services.json
+/ios/firebase_app_id_file.json
