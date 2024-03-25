@@ -11,6 +11,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 import 'blocs/auth/auth_bloc.dart';
+import 'blocs/signin/signin_cubit.dart';
 import 'repositories/auth_repository.dart';
 
 void main() async {
@@ -40,6 +41,11 @@ class MyApp extends StatelessWidget {
         providers: [
           BlocProvider<AuthBloc>(
             create: (context) => AuthBloc(
+              authRepository: context.read<AuthRepository>(),
+            ),
+          ),
+          BlocProvider<SigninCubit>(
+            create: (context) => SigninCubit(
               authRepository: context.read<AuthRepository>(),
             ),
           ),
