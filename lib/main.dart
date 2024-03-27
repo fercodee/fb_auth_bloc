@@ -12,8 +12,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 import 'blocs/auth/auth_bloc.dart';
+import 'blocs/profile/profile_cubit.dart';
 import 'blocs/signin/signin_cubit.dart';
 import 'repositories/auth_repository.dart';
+import 'repositories/profile_repository.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -37,6 +39,11 @@ class MyApp extends StatelessWidget {
             firebaseAuth: FirebaseAuth.instance,
           ),
         ),
+        RepositoryProvider<ProfileRepository>(
+          create: (context) => ProfileRepository(
+            firestore: FirebaseFirestore.instance,
+          ),
+        ),
       ],
       child: MultiBlocProvider(
         providers: [
@@ -53,6 +60,11 @@ class MyApp extends StatelessWidget {
           BlocProvider<SignupCubit>(
             create: (context) => SignupCubit(
               authRepository: context.read<AuthRepository>(),
+            ),
+          ),
+          BlocProvider<ProfileCubit>(
+            create: (context) => ProfileCubit(
+              profileRepository: context.read<ProfileRepository>(),
             ),
           ),
         ],
