@@ -10,7 +10,7 @@ enum ProfileStatus {
 class ProfileState extends Equatable {
   final ProfileStatus status;
   final User user;
-  final CustomError? error;
+  final CustomError error;
 
   const ProfileState({
     required this.status,

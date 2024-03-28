@@ -13,8 +13,8 @@ class User extends Equatable {
     final userData = userDoc.data() as Map<String, dynamic>?;
 
     return User(
-      id: userData!['id'],
-      name: userData['name'],
+      id: userDoc.id,
+      name: userData!['name'],
       email: userData['email'],
       profileImage: userData['profileImage'],
       point: userData['point'],

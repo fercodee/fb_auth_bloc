@@ -16,9 +16,17 @@ class SplashPage extends StatelessWidget {
         debugPrint('listener: $state');
 
         if (state.authStatus == AuthStatus.unauthenticated) {
-          Navigator.pushReplacementNamed(context, SigninPage.routeName);
+          Navigator.pushNamedAndRemoveUntil(context, SigninPage.routeName,
+              (route) {
+            debugPrint('route.settings.name: ${route.settings.name}');
+            debugPrint('ModalRoute: ${ModalRoute.of(context)!.settings.name}');
+
+            return route.settings.name == ModalRoute.of(context)!.settings.name
+                ? true
+                : false;
+          });
         } else if (state.authStatus == AuthStatus.authenticated) {
-          Navigator.pushReplacementNamed(context, HomePage.routeName);
+          Navigator.pushNamed(context, HomePage.routeName);
         }
       },
       builder: (context, state) {
